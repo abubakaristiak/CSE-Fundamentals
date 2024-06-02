@@ -1,0 +1,2 @@
+Ascending : 10 20 25 30 40 
+Descending : 40 30 25 20 10 

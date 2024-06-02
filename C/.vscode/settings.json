@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "stdio.h": "c"
+    },
+    "editor.tokenColorCustomizations": {
+        "comments": "",
+        "textMateRules": []
+    }
+}
