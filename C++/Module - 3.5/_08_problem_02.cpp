@@ -20,7 +20,5 @@ int main()
     cout << kohli->country << endl;
 
     delete dhoni;
-    delete kohli;
-    
     return 0;
 }
