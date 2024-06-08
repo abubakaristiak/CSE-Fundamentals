@@ -1,0 +1,1 @@
+{"name":"Local: _05_O_Sort_String","url":"e:\\Phitron\\C++\\Module - 3.5\\_05_O_Sort_String.cpp","tests":[{"id":1717832215775,"input":"4\ndeab","output":"abde\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Phitron\\C++\\Module - 3.5\\_05_O_Sort_String.cpp","group":"local","local":true}
