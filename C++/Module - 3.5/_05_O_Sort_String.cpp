@@ -35,12 +35,12 @@ int main()
     for(int i=0; i<n; i++){
         char ch;
         cin >> ch;
-        freq[ch-97]++;
+        freq[ch-'a']++;
     }
     for(int i=0; i<26; i++){
         while (freq[i]>0)
         {
-            cout << (char)(i+97);
+            cout << (char)(i+'a');
             freq[i]--;
         }
         
