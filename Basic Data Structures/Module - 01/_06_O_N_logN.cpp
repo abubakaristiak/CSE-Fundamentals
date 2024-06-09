@@ -4,9 +4,11 @@ int main()
 {
     int n;
     cin >> n;
-    for(int i=1; i<=n; i++){
+    for(int i=1; i<=n; i++){        // O(N)
         int x = i;
-        while (x>0)
+        while (x>0)                // O(lon(N))  
+                                //------------------
+                                //  O(Nlog(N))
         {
             int digit = x%10;
             cout << digit <<" ";
