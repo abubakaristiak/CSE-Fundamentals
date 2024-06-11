@@ -1,0 +1,1 @@
+{"name":"Local: F_Reversing","url":"e:\\Phitron\\Basic Data Structures\\Module -2.5\\F_Reversing.cpp","tests":[{"id":1718074412183,"input":"5\n1 -2 0 3 4\n","output":"1 2 0 1 1 "}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Phitron\\Basic Data Structures\\Module -2.5\\F_Reversing.cpp","group":"local","local":true}
