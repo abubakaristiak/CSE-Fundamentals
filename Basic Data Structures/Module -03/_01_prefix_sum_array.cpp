@@ -6,15 +6,17 @@ int main()
     long long int n, q;
     cin >> n >> q;
     vector<int> ar(n);
-    for(int i=0; i<n;i++){
+    for(int i=0; i<n;i++){      // O(N)
         cin >> ar[i];
     }
     long long int pre[n];
     pre[0]=ar[0];
-    for(int i=1; i<n; i++){
+    for(int i=1; i<n; i++){     // O(N)
         pre[i] = ar[i] + pre[i-1];
     }
-    while(q--)
+    while(q--)                  // O(Q)
+                                //-----------
+                                // O(N+Q) -> total complexity
     {
         long long int l,r;
         cin>> l >> r;
