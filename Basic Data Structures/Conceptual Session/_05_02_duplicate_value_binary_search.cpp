@@ -16,7 +16,7 @@ int main()
     {
         int mid = (l+r)/2;
         if(x == ar[mid]){
-            if(ar[mid-1]==x || ar[mid+1]==x){
+            if(mid != 0 && ar[mid-1]==x || mid != n-1 && ar[mid+1]==x){
                 is_duplicate=true;
                 break;
             }

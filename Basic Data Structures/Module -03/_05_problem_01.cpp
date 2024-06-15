@@ -18,7 +18,7 @@ int main()
     {
         int mid = (l+r)/2;
         if(x == ar[mid]){
-            if(ar[mid-1]==x || ar[mid+1]==x){
+            if(mid != 0 && ar[mid-1]==x || mid != n-1 && ar[mid+1]==x){    // check all egde case
                 is_duplicate=true;
                 break;
             }
@@ -38,7 +38,6 @@ int main()
     }
     return 0;
 }
-
 // O(N)
 // linear search;
 // #include<bits/stdc++.h>
