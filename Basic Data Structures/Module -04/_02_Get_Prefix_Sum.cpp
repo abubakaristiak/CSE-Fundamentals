@@ -1,3 +1,4 @@
+//https://www.hackerrank.com/contests/assignment-01-a-basic-data-structure-a-batch-05/challenges/get-prefix-sum
 #include<bits/stdc++.h>
 using namespace std;
 int main()
