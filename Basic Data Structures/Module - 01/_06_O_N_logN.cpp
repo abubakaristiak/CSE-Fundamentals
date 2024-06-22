@@ -6,7 +6,7 @@ int main()
     cin >> n;
     for(int i=1; i<=n; i++){        // O(N)
         int x = i;
-        while (x>0)                // O(lon(N))  
+        while (x>0)                // O(log(N))  
                                 //------------------
                                 //  O(Nlog(N))
         {
