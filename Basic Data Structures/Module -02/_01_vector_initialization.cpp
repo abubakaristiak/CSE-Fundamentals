@@ -2,37 +2,37 @@
 using namespace std;
 int main()
 {
-    // // type -> 1;
-    // vector<int> v;
-    // cout << v.size()<<endl;
+    // type -> 1;
+    vector<int> v;
+    cout << v.size()<<endl;
 
 
-    // // type -> 2;
-    // vector<int> v(5);
-    // for(int i=0; i<v.size(); i++){
-    //     cout << v[i] <<" ";
-    // }
-    // cout << endl;
-    // cout << v.size()<<endl;
+    // type -> 2;
+    vector<int> v(5);
+    for(int i=0; i<v.size(); i++){
+        cout << v[i] <<" ";
+    }
+    cout << endl;
+    cout << v.size()<<endl;
 
     
-    //  // type -> 3;
-    // vector<int> v(5,10);
-    // for(int i=0; i<v.size(); i++){
-    //     cout << v[i] <<" ";
-    // }
-    // cout << endl;
-    // cout << v.size()<<endl;
+     // type -> 3;
+    vector<int> v(5,10);
+    for(int i=0; i<v.size(); i++){
+        cout << v[i] <<" ";
+    }
+    cout << endl;
+    cout << v.size()<<endl;
 
 
-    //  // type -> 4;
-    // vector<int>v2(5,100);
-    // vector<int> v(v2);
-    // for(int i=0; i<v.size(); i++){
-    //     cout << v[i] <<" ";
-    // }
-    // cout << endl;
-    // cout << v.size()<<endl;
+     // type -> 4;
+    vector<int>v2(5,100);
+    vector<int> v(v2);
+    for(int i=0; i<v.size(); i++){
+        cout << v[i] <<" ";
+    }
+    cout << endl;
+    cout << v.size()<<endl;
 
 
     // type -> 5;

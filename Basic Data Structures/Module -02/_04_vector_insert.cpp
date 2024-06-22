@@ -2,12 +2,16 @@
 using namespace std;
 int main()
 {
-    // // jodi specific index ar moddhe only akta value add korte ci
-    // vector<int> v = {1,2,3,4,5};
-    // v.insert(v.begin()+2,10);
-    // for(int x:v){
-    //     cout << x <<" ";
-    // }
+    // jodi specific index ar moddhe only akta value add korte ci
+    vector<int> v = {1,2,3,4,5};
+    v.insert(v.begin()+2,10);
+    for(int x:v){
+        cout << x <<" ";
+    }
+
+
+
+
 
 
     vector<int> v = {1,2,3,4,5};
