@@ -1,31 +1,31 @@
-// // #include <bits/stdc++.h>
-// // using namespace std;
-// // int main()
-// // {
-// //     int n;
-// //     cin >> n;
-// //     vector<int> v(n);
-// //     for (int i = 0; i < n; i++)
-// //     {
-// //         cin >> v[i];
-// //     }
-// //     int mid = n / 2;
-// //     int left_sum = 0;
-// //     int right_sum = 0;
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin >> n;
+    vector<int> v(n);
+    for (int i = 0; i < n; i++)
+    {
+        cin >> v[i];
+    }
+    int mid = n / 2;
+    int left_sum = 0;
+    int right_sum = 0;
 
-// //     for (int j = 0; j < mid; j++)
-// //     {
-// //         left_sum += v[j];
-// //     }
-// //     for (int j = mid + 1; j < n; j++)
-// //     {
-// //         right_sum += v[j];
-// //     }
-// //     if(left_sum==right_sum){
-// //         cout << mid << endl;
-// //     }
-// //     return 0;
-// // }
+    for (int j = 0; j < mid; j++)
+    {
+        left_sum += v[j];
+    }
+    for (int j = mid + 1; j < n; j++)
+    {
+        right_sum += v[j];
+    }
+    if(left_sum==right_sum){
+        cout << mid << endl;
+    }
+    return 0;
+}
 
 
 
@@ -146,21 +146,21 @@
 //   return 0;
 // }
 
-#include<bits/stdc++.h>
-using namespace std;
-int main()
-{
-    int n;
-    cin >> n;
-    vector<int> ar(n);
-    for(int i= 0; i<n; i++){
-      cin >> ar[i];
-    }
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     vector<int> ar(n);
+//     for(int i= 0; i<n; i++){
+//       cin >> ar[i];
+//     }
 
-    int total_sum = 0;
-    for(int i=0; i<n; i++){
-      total_sum +=ar[i];
-    }
-    cout << total_sum<<endl;
-    return 0;
-}
+//     int total_sum = 0;
+//     for(int i=0; i<n; i++){
+//       total_sum +=ar[i];
+//     }
+//     cout << total_sum<<endl;
+//     return 0;
+// }
