@@ -49,6 +49,20 @@ void insertAthead(Node * &head, int a){
     newNode->next = head;
     head = newNode;
 }
+void deleteAtanyPosition(Node *&head, int position){
+    Node *temp = head;
+    for(int i=1; i<position-1; i++){
+        temp = temp->next;
+    }
+    Node *deleteNode = temp->next;
+    temp->next= temp->next->next;
+    delete deleteNode;
+}
+void deleteHead(Node *&head){
+    Node *deleteNode = head;
+    head = head->next;
+    delete deleteNode;
+}
 int main()
 {
     Node * head = NULL;
@@ -60,14 +74,20 @@ int main()
         insert_at_tail(head, val);
     }
     printingList(head);
-    int pos, v;
-    cin >> pos >> v;
-    insertAtPosition(head, pos, v);
+    cout <<endl;
+    // int pos, v;
+    // cin >> pos >> v;
+    // insertAtPosition(head, pos, v);
+    // printingList(head);
+    // int a; 
+    // cin >> a;
+    // insertAthead(head, a);
+    // printingList(head);
+    // int position;
+    // cin >> position;
+    // deleteAtanyPosition(head, position);
+    // printingList(head);
+    deleteHead(head);
     printingList(head);
-    int a; 
-    cin >> a;
-    insertAthead(head, a);
-    printingList(head);
-
     return 0;
 }
