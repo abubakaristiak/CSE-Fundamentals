@@ -40,7 +40,7 @@ void printList(Node *head){
     }
     if(count%2==1){
         int mid = count/2;
-        // temp = head;
+        temp = head;
         for(int i=1; i<=mid; i++){
             temp = temp->next;
         }
@@ -48,11 +48,12 @@ void printList(Node *head){
     }
     else if(count%2==0){
         int mid = count/2;
-        // temp = head;
+        temp = head;
         for(int i=1; i<mid; i++){
             temp = temp->next;
         }
         cout << temp->val <<" "<<temp->next->val<<endl;
+        // egde case:
         // if(temp != NULL && temp->next != NULL){
         //     cout << temp->val <<" "<<temp->next->val<<endl;
         // }

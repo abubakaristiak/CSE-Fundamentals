@@ -1,3 +1,9 @@
+/*
+Question: Take a singly linked list as input, then take q queries.
+In each query you will be given an index and value. 
+You need to insert those values in the given index and print the linked list.
+If the index is invalid print “Invalid”.
+*/
 #include<bits/stdc++.h>
 using namespace std;
 class Node

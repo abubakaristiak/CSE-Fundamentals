@@ -1,5 +1,3 @@
-//Question: Take a singly linked list as input and check if the linked list is sorted in ascending order.
-
 #include <bits/stdc++.h>
 using namespace std;
 class Node
@@ -25,42 +23,42 @@ void insert_tail(Node *&head, Node *&tail, int val)
     tail->next = newNode;
     tail = newNode;
 }
-// void check_sort(Node *head)
+// void printing_sort(Node *head)
 // {
 //     Node *tmp = head;
-//     int flag = 0;
-//     for(Node *i= head; i->next != NULL; i=i->next){
-//         for(Node *j=i->next; j !=NULL; j=j->next){
-//             if(i->val>j->val){
-//                 flag=1;
-//                 break;
+//     for(Node *i=head; i->next != NULL; i= i->next){
+//         for(Node *j=i->next; j != NULL; j= j->next){
+//             if(i->val < j->val){
+//                 swap(i->val, j->val);
 //             }
 //         }
 //     }
-//     if(flag==1){
-//         cout << "NO"<<endl;
-//     }
-//     else cout << "YES"<<endl;
 // }
 
-// Another way better approach
-void check_sort(Node *head)
+// better approach:
+void printing_sort(Node *head)
 {
     Node *tmp = head;
-    int flag = 0;
-    while (tmp->next != NULL)
+    vector<int> v;
+    while (tmp != NULL)
     {
-        if(tmp->val>tmp->next->val){
-            flag=1;
-            break;
-        }
+        v.push_back(tmp->val);
+        tmp = tmp->next;
+    }
+    sort(v.begin(), v.end(),greater<int>());
+    for(int val: v){
+        cout << val <<" ";
+    }
+    
+}
+void printing_list(Node *head){
+    Node *tmp = head;
+    while (tmp != NULL)
+    {
+        cout << tmp->val <<" ";
         tmp = tmp->next;
     }
     
-    if(flag==1){
-        cout << "NO"<<endl;
-    }
-    else cout << "YES"<<endl;
 }
 int main()
 {
@@ -74,6 +72,7 @@ int main()
             break;
         insert_tail(head, tail, val);
     }
-    check_sort(head);
+    printing_sort(head);
+    // printing_list(head);
     return 0;
 }
