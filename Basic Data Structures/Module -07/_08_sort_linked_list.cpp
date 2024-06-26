@@ -48,7 +48,6 @@ int main()
                 swap(i->val, j->val);
             }
         }
-        cout<< endl;
     }
     print_linked_list(head);
     
