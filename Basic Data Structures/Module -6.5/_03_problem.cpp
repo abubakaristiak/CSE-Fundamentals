@@ -40,7 +40,7 @@ void printList(Node *head){
     }
     if(count%2==1){
         int mid = count/2;
-        temp = head;
+        // temp = head;
         for(int i=1; i<=mid; i++){
             temp = temp->next;
         }
@@ -48,7 +48,7 @@ void printList(Node *head){
     }
     else if(count%2==0){
         int mid = count/2;
-        temp = head;
+        // temp = head;
         for(int i=1; i<mid; i++){
             temp = temp->next;
         }
@@ -59,15 +59,6 @@ void printList(Node *head){
     }
     
     
-}
-
-void even_list(Node *head,int n){
-    Node *newNode = new Node(n);
-    Node *temp = head;
-    for(int i=1; i<n; i++){
-        cout << temp->val<<endl;
-        temp = temp->next;
-    }
 }
 int main()
 {
