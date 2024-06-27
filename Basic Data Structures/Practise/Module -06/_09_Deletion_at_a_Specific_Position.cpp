@@ -26,20 +26,19 @@ void insert_tail(Node * &head,int val)
     tmp->next = newNode;
     
 }
-void delete_at_any_position(Node *head, int pos, int v){
-    Node *newNode = new Node(v);
+void delete_at_any_position(Node *head, int pos){
     Node *tmp = head;
     for(int i=1; i<pos-1; i++){
         tmp = tmp->next;
     } 
-    newNode->next = tmp->next;
-    tmp->next = newNode;
+    Node * deletenode = tmp->next;
+    tmp->next= tmp->next->next;
+    delete deletenode; 
 }
-void insert_head(Node * &head, int v){
-    Node *newNode = new Node(v);
-    Node *tmp = head;
-    newNode->next = head;
-    head = newNode;
+void delete_head(Node * &head){
+    Node *deletenode = head;
+    head = head->next;
+    delete deletenode;
 }
 void printingList(Node *head){
     Node *tmp = head;
@@ -62,13 +61,17 @@ int main()
         insert_tail(head,val);
     }
     printingList(head);
-    // int pos, v;
-    // cin >> pos>> v;
-    // delete_at_any_position(head, pos, v);
-    int v; 
-    cin>> v;
-    insert_head(head, v);
+    int pos;
+    cin >> pos;
+    if(pos==0){
+        delete_head(head);
+    }
+    else{
+
+    delete_at_any_position(head, pos);
+    }
     printingList(head);
+    
 
 
     return 0;
