@@ -1,0 +1,38 @@
+//https://docs.google.com/document/d/1mBmbTd2A0r2GYV50GkweULyN-TqKZSmx7UVM4-NX5cs/edit
+
+1. Why do you think linked-list requires more memory than an array when storing the same number of elements?
+Answer:
+A linked list requires more memory than an array because each node stores both the data and a pointer to the next node, whereas an array only stores the data in a contiguous block. This additional storage for pointers in linked lists leads to higher overall memory usage.
+
+
+
+2. Write down Three Limitations of the array which can be solved by the use of Linked List?
+Answer:
+Fixed Size: Arrays have a fixed size defined at creation, which can lead to wasted memory or insufficient space for growing data. Linked lists can dynamically expand and contract, accommodating varying amounts of data without needing a predefined size.
+
+Expensive Insertions and Deletions: Inserting or deleting elements in the middle of an array requires shifting elements, which can be time-consuming. Linked lists allow for efficient insertions and deletions at any position without the need for shifting elements, as they involve simply updating pointers.
+
+Contiguous Memory Requirement: Arrays require a contiguous block of memory, which can be problematic in systems with fragmented memory. Linked lists store elements in non-contiguous memory locations, allowing for more flexible memory allocation and usage.
+
+
+
+3. What is the value of Head?
+Answer:
+The value of Head is null (or None) for an empty list, and a reference to the first node when the list contains nodes.
+
+
+
+4. What will be the value of Sum following pseudocode snippets? 
+Sum = 0
+Temp = Head
+While ( Temp -> Next!= 1020){
+	Sum += Temp-> value
+	Temp = Temp -> Next
+}
+Sum -= Temp -> value;
+Answer:
+-1
+explanation:
+while ar moddhe sum = 13;(tin bar colbe loop ta)
+Sum -= Temp -> value;----> 14;
+main answer: 13-14 = -1;
