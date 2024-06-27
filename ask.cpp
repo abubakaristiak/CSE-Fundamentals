@@ -52,9 +52,7 @@ void printList(Node *head){
         }
         cout << temp->val <<" "<<temp->next->val<<endl;
 
-    }
-    
-    
+    }   
 }
 int main()
 {
