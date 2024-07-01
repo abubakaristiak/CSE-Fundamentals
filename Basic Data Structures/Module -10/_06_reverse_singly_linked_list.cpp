@@ -11,20 +11,17 @@ class Node
         this->next = NULL;
     }
 };
-
-void print_recursion(Node *n){
+void print_recursion(Node * n){
+    // base case
     if(n==NULL) return;
+    cout << n->val<<" ";
     print_recursion(n->next);
-    cout << n->val <<" ";
 }
-void reverse(Node *&head, Node *run){
-    if(run->next == NULL){
-        head = run;
-        return;
-    }
-    reverse(head, run->next);
-    run->next->next=run;
-    run->next = NULL;
+void print_reverse(Node * n){
+    // base case
+    if(n==NULL) return;
+    print_reverse(n->next);
+    cout << n->val<<" ";
 }
 void print(Node *head){
     Node *tmp = head;
@@ -36,16 +33,23 @@ void print(Node *head){
     cout << endl;
     
 }
+void reverse(Node *&head, Node *current){
+    if(current->next == NULL){
+        head=current;
+        return;
+    }
+    reverse(head,current->next);
+    current->next->next = current;
+    current->next = NULL;
+}
 int main()
 {
-    Node *head = new Node(10);
-    Node *a = new Node(20);
-    Node *b = new Node(30);
+    Node * head = new Node(10);
+    Node * a = new Node(20);
+    Node * b = new Node(30);
 
     head->next = a;
     a->next = b;
-    // print_recursion(head);
-    print(head);
     reverse(head, head);
     print(head);
     return 0;
