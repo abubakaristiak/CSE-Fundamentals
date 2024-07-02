@@ -26,7 +26,6 @@ void insert_tail(Node *&head, Node *&tail, int val){
     tail = tail->next;
 }
 
-
 int size_doubly(Node *head){
     Node *tmp = head;
     int count = 0; 
@@ -63,8 +62,6 @@ void sort(Node *&head, Node *&tail){
     if(i->val>j->val){
         swap(i->val, j->val);
     }
-    
-    
 }
 int main()
 {
