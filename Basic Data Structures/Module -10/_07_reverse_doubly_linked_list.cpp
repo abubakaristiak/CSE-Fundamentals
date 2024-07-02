@@ -51,8 +51,7 @@ int main()
     Node* a = new Node(20);
     Node* b = new Node(30);
     Node* c = new Node(40);
-    Node* d = new Node(50);
-    Node* tail = d;
+    Node* tail = c;
     
     // connection
     head->next=a;
@@ -61,8 +60,7 @@ int main()
     b->prev = a;
     b->next = c;
     c->prev = b;
-    c->next = d;
-    d->prev = c;
+    
     
 
     print_normal(head); 

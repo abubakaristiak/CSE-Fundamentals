@@ -4,7 +4,7 @@ int main()
 {
     // list<int> myList;
     list<int>myList(10,5);
-/*list ar moddhe i diya value access kora jai na. ai jonne iterator use korte hoi*/    
+    /*list ar moddhe i diya value access kora jai na. ai jonne iterator use korte hoi*/    
     for(auto it = myList.begin(); it != myList.end(); it++){
         cout << *it <<endl; 
     }
