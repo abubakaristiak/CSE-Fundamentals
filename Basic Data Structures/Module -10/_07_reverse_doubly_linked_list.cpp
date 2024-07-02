@@ -61,6 +61,7 @@ int main()
     b->next = c;
     c->prev = b;
     
+    
     print_normal(head); 
     reverse(head, tail);
     print_normal(head); 
