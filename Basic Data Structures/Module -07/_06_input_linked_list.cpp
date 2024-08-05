@@ -36,11 +36,10 @@ int main()
     Node * head = NULL;
     Node *tail = NULL;
     int val;
-    while (true)        //O(N)
-    {
-    cin >> val;
-    if(val == -1) break;
-    insert_tail(head, tail, val);   // O(1)
+    while (true){       //O(N)
+        cin >> val;
+        if(val == -1) break;
+        insert_tail(head, tail, val);   // O(1)
     }
     print_linked_list(head);
     return 0;

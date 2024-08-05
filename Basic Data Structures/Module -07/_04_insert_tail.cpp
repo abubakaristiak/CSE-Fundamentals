@@ -54,7 +54,7 @@ void print_linked_list(Node *head){
     }
     
 }
-void insert(Node *head, int pos, int val){
+void insertAtPosition(Node *head, int pos, int val){
     Node * newNode = new Node(val);
     Node * tmp = head;
     for(int i=1; i<=pos-1; i++){        // O(N)
@@ -118,7 +118,7 @@ int main()
         insert_tail(head,tail,val);
     }
     else{
-        insert(head, pos, val);
+        insertAtPosition(head, pos, val);
     }
     print_linked_list(head);
     cout <<endl <<"Tail -> "<<tail->val<<endl;
