@@ -66,7 +66,7 @@ void insert_head(Node * &head, int val){
     head->prev = newNode;
     head = newNode;
 }
-void insert_tail(Node *& head, Node * &tail, int val){
+void insert_tail(Node *&head, Node *&tail, int val){
     Node *newNode = new Node(val);
     if(head == NULL){
         head = newNode;
