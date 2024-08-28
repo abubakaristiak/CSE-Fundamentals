@@ -5,5 +5,9 @@
         "random": "cpp",
         "iostream": "cpp",
         "new": "cpp"
+    },
+    "editor.tokenColorCustomizations": {
+        "comments": "",
+        "textMateRules": []
     }
 }
