@@ -21,7 +21,7 @@ class myQueue{
         Node *newNode = new Node(val);
         if(head == NULL){
             head = newNode;
-            tail = newNode;
+            tail = newNode; 
             return;
         }
         tail->next = newNode;

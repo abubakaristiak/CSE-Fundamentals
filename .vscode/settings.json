@@ -4,7 +4,11 @@
         "ostream": "cpp",
         "random": "cpp",
         "iostream": "cpp",
-        "new": "cpp"
+        "new": "cpp",
+        "array": "cpp",
+        "any": "cpp",
+        "string_view": "cpp",
+        "regex": "cpp"
     },
     "editor.tokenColorCustomizations": {
         "comments": "",
