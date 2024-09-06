@@ -3,7 +3,7 @@ using namespace std;
 vector<int> v[1005];
 bool vis[1005];
 int level[1005];
-int grandparent[1005];
+int parent[1005];
 
 void bfs(int src){
     queue<int> q;
@@ -12,16 +12,16 @@ void bfs(int src){
     level[src] = 0;
     while (!q.empty())
     {
-        int parent = q.front();
+        int par = q.front();
         q.pop();
 
-        for(int child : v[parent])
+        for(int child : v[par])
         {
             if(vis[child] == false){
                 q.push(child);
                 vis[child] = true;
-                level[child] = level[parent]+1;
-                grandparent[child] = parent;
+                level[child] = level[par]+1;
+                parent[child] = par;
             }
         }
     }
@@ -42,15 +42,18 @@ int main()
     cin >> src >> des;
     memset(vis, false, sizeof(vis));
     memset(level, -1, sizeof(level));
-    memset(grandparent, -1, sizeof(grandparent));
+    memset(parent, -1, sizeof(parent));
+
     bfs(src);
+
     int x = des;
     vector<int> path;
     while (x != -1)
     {
         path.push_back(x);
-        x = grandparent[x];
+        x = parent[x];
     }
+    
     reverse(path.begin(), path.end());
     for(int val: path)
     {
