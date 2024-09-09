@@ -1,5 +1,4 @@
 // TODO: https://codeforces.com/problemset/problem/20/C
-
 #include<bits/stdc++.h>
 using namespace std;
 const long long int INF = 1e18;
