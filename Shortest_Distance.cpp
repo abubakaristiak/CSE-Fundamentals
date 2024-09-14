@@ -19,7 +19,7 @@ int main()
         long long int a, b, c;
         cin >> a >> b >> c;
         adj[a][b] = min(adj[a][b],c);
-
+    
     }
 
     for(int k=1; k<=n; k++){
