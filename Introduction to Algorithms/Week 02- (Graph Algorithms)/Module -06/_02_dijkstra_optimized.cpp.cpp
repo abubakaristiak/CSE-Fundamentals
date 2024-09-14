@@ -13,7 +13,6 @@ void dijkstra(int src){
     
     priority_queue<pair<int,int>, vector<pair<int,int>>, cmp> pq;
     pq.push({src, 0}); 
-    pq.push({src,0});
     dis[src] = 0;
     while (!pq.empty())
     {

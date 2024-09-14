@@ -1,1 +1,2 @@
-cycle ache wazidar kache..
+0 -> 0
+1 -> 9
