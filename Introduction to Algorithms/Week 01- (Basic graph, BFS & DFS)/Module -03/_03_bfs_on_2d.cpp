@@ -18,15 +18,18 @@ void bfs(int si, int sj){
     q.push({si,sj});
     vis[si][sj] = true;
     dis[si][sj] = 0;
+
     while (!q.empty())
     {
         pair<int, int> par = q.front();
         int a = par.first; 
         int b = par.second;
         q.pop();
+
         for(int i=0; i<4; i++){
             int ci = a + d[i].first;
             int cj = b + d[i].second;
+
             if(vaild(ci, cj) == true && vis[ci][cj] == false){
                 q.push({ci, cj});
                 vis[ci][cj] = true;
@@ -45,10 +48,12 @@ int main()
             cin >> a[i][j];
         }
     }
+    
     int si, sj;
     cin >> si >> sj;
     memset(vis, false, sizeof(vis));
     memset(dis, -1, sizeof(dis));
+
     bfs(si, sj);
     cout << dis[2][3];
     return 0;

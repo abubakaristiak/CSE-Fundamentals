@@ -3,6 +3,7 @@ using namespace std;
 vector<int> v[1005];
 bool vis[1005];
 int level[1005];
+
 void bfs(int src){
     queue<int> q;
     q.push(src);

@@ -12,6 +12,7 @@ public:
 };
 const int N = 1e5+5;
 int dis[N];
+
 int main()
 {
     int n,e; 
@@ -27,6 +28,7 @@ int main()
     for(int i=0; i<n; i++){
         dis[i] = INT_MAX;
     }
+    
     dis[0] = 0;
     for(int i=1; i<=n-1; i++){
         for(Edge ed : EdgeList){

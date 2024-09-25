@@ -11,6 +11,8 @@ bool vaild(int i, int j){
     }
     return true;
 }
+
+
 void dfs(int si, int sj){
     cout << si << " "<< sj <<endl;
     vis[si][sj] = true;
@@ -18,6 +20,7 @@ void dfs(int si, int sj){
     for(int i=0; i<4; i++){
         int ci = si+d[i].first;
         int cj = sj+d[i].second;
+
         if(vaild(ci, cj) == true && vis[ci][cj] == false){
             dfs(ci, cj);
         }
@@ -31,9 +34,11 @@ int main()
             cin >> a[i][j];
         }
     }
+
     int si, sj;
     cin >> si >> sj;
     memset(vis, false, sizeof(vis));
+    
     dfs(si,sj);
     return 0;
 }
