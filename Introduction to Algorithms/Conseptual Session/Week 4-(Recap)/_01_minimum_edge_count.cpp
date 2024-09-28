@@ -15,8 +15,12 @@ public:
 bool cmp(Edge a, Edge b){
     return a.w < b.w;
 }
+
+
 int leader[N];
 int group_size[N];
+
+
 void dsu_inti(int n){
     for(int i=1; i<=n; i++){
         leader[i] = -1;
@@ -33,6 +37,8 @@ int dsu_find(int node){
     leader[node] = l;
     return l;
 }
+
+
 
 void dsu_union(int node1, int node2){
     int leaderA = dsu_find(node1);
@@ -77,6 +83,7 @@ int main()
         }
     }
 
+
     int center_leader = dsu_find(1);
     bool connected_edge = true;
 
@@ -85,6 +92,8 @@ int main()
             connected_edge = false;
         }
     }
+
+    
     if(connected_edge) cout << mn_edge <<endl;
     else cout << "IMPOSSIBLE" <<endl;
     
