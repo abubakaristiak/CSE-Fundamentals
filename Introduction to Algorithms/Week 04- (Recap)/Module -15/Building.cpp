@@ -12,17 +12,25 @@ public:
     }
 };
 
+
+
 bool cmp(Edge a, Edge b){
     return a.w < b.w;
 }
+
+
 int leader[N];
 int group_size[N];
+
+
 void dsu_inti(int n){
     for(int i=1; i<=n; i++){
         leader[i] = -1;
         group_size[i] = 1;
     }
 }
+
+
 
 
 int dsu_find(int node){
@@ -33,6 +41,8 @@ int dsu_find(int node){
     leader[node] = l;
     return l;
 }
+
+
 
 void dsu_union(int node1, int node2){
     int leaderA = dsu_find(node1);
@@ -66,14 +76,14 @@ int main()
 
     sort(EdgeList.begin(), EdgeList.end(), cmp);
 
-    ll mn_edge = 0;
+    ll totalCost = 0;
     for(Edge ed : EdgeList){
         int leader_U = dsu_find(ed.u);
         int leader_V = dsu_find(ed.v);
 
         if(leader_U != leader_V){
-            dsu_union(ed.u, ed.v);\
-            mn_edge++;
+            dsu_union(ed.u, ed.v);
+            totalCost += ed.w;
         }
     }
 
@@ -85,8 +95,8 @@ int main()
             connected_edge = false;
         }
     }
-    if(connected_edge) cout << mn_edge <<endl;
-    else cout << "IMPOSSIBLE" <<endl;
+    if(connected_edge) cout << totalCost <<endl;
+    else cout << -1 <<endl;
     
     return 0;
 }

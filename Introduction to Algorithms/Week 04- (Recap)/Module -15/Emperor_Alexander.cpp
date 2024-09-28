@@ -2,6 +2,7 @@
 using namespace std;
 #define ll long long
 const int N = 1e5+10;
+
 class Edge{
 public:
     int u,v,w;
@@ -12,17 +13,25 @@ public:
     }
 };
 
+
+
 bool cmp(Edge a, Edge b){
     return a.w < b.w;
 }
+
+
 int leader[N];
 int group_size[N];
+
+
 void dsu_inti(int n){
     for(int i=1; i<=n; i++){
         leader[i] = -1;
         group_size[i] = 1;
     }
 }
+
+
 
 
 int dsu_find(int node){
@@ -33,6 +42,8 @@ int dsu_find(int node){
     leader[node] = l;
     return l;
 }
+
+
 
 void dsu_union(int node1, int node2){
     int leaderA = dsu_find(node1);
@@ -66,27 +77,27 @@ int main()
 
     sort(EdgeList.begin(), EdgeList.end(), cmp);
 
-    ll mn_edge = 0;
+    ll totalCost = 0;
+    ll edge_count = 0;
     for(Edge ed : EdgeList){
         int leader_U = dsu_find(ed.u);
         int leader_V = dsu_find(ed.v);
 
         if(leader_U != leader_V){
-            dsu_union(ed.u, ed.v);\
-            mn_edge++;
+            dsu_union(ed.u, ed.v);
+            totalCost += ed.w;
         }
+        else edge_count++;
     }
 
-    int center_leader = dsu_find(1);
-    bool connected_edge = true;
-
-    for(int i=2; i<=n; i++){
-        if(dsu_find(i) != center_leader){
-            connected_edge = false;
-        }
+    ll garbage = 0;
+    for(int i=0; i<=n; i++){
+        if(leader[i] == -1) garbage++;
     }
-    if(connected_edge) cout << mn_edge <<endl;
-    else cout << "IMPOSSIBLE" <<endl;
+
+    if(garbage>1) cout << "Not Possible" << endl;
+    else if(garbage == 1) cout << edge_count << " " << totalCost<< endl;
+
     
     return 0;
 }
