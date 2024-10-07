@@ -1,47 +1,30 @@
 #include<bits/stdc++.h>
 using namespace std;
-const long long int INF = 1e18;
+int knap(int n, int weight[], int value[], int w){
+    if(n==0 || w==0) return 0;
+    if(weight[n-1] <= w){
+        int op1 = knap(n-1, weight, value, w-weight[n-1])+value[n-1];
+        int op2 = knap(n-1, weight, value, w);
+        return max(op1, op2);
+    }
+    else{
+        int op2 = knap(n-1, weight, value, w);
+        return op2;
+    }
+}
 int main()
 {
-    int n,e; 
-    cin >> n >> e;
-    long long int adj[n+5][n+5];
-    for(int i=1; i<=n; i++){
-        for(int j=1; j<=n; j++){
-            adj[i][j] = INF;
-            if(i==j){
-                adj[i][j] = 0;
-            }
-        }
-    }
-    while (e--)
-    {
-        long long int a, b, c;
-        cin >> a >> b >> c;
-        adj[a][b] = min(adj[a][b],c);
-
+    int n; cin >> n;
+    int weight[n], value[n];
+    for(int i=0; i<n; i++){
+        cin >> weight[i];
     }
 
-    for(int k=1; k<=n; k++){
-        for(int i=1; i<=n; i++){
-            for(int j=1; j<=n; j++){
-                if(adj[i][k] + adj[k][j] < adj[i][j]){
-                    adj[i][j] = adj[i][k] + adj[k][j];
-                }
-            }
-        }
+    for(int i=0; i<n; i++){
+        cin >> value[i];
     }
-    int test; cin >> test;
-    while (test--)
-    {
-        int source, destination;
-        cin >> source >> destination;
-        if(adj[source][destination] == INF){
-            cout << -1 <<endl;
-        }
-        else cout << adj[source][destination] << endl;
-    }
-    
+    int w; cin>> w;
+    cout << knap(n,weight, value, w);
     
     return 0;
 }
