@@ -8,6 +8,7 @@ int main()
     for(int i=0; i<n; i++){
         cin >> w[i];
     }
+    
     int s;
     cin >>s;
     int dp[n+1][s+1];
