@@ -1,3 +1,5 @@
+//https://codeforces.com/problemset/problem/233/A
+
 #include<bits/stdc++.h>
 using namespace std;
 int main()
@@ -8,9 +10,12 @@ int main()
     cin>> n;
     if(n%2!=0){
         cout << -1 << endl;
+        return 0;
     }
+
+    
     vector<int>P(n+1);
-    for(int i=0; i<=n; i++){
+    for(int i=1; i<=n; i++){
         P[i] = i;
     }
     for(int i=1; i<n; i+=2){
