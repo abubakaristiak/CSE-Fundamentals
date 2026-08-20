@@ -7,11 +7,11 @@ int main(){
 
     printf("\nFloating point variable: \n");
     float acs = 2.564;
-    printf("%0.3f", acs);
+    printf("%0.4f", acs);
 
 
     printf("\nCharacter variables: \n");
-    char cr = 'a';
-    printf("%c", cr);
+    char ch = 'a';
+    printf("%c", ch);
     return 0;
 }
