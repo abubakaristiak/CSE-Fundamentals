@@ -22,7 +22,7 @@ int main()
     // Divion:
 
     int x = 5, y = 2;
-    float div = x * 0.1 / y;
+    float div = x * 1.0 / y;
     printf("%0.2f\n", div);
 
     // Reminder:
